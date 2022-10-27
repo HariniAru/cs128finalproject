@@ -36,10 +36,10 @@ Other features:
 
 There will be some bats on some nodes. If the player meets a bat, a bat can take the player to a random node (may take the player to a node with a trap, or take the player to a node with some coins).
 
-**Navigatable Maze (Maze Runner)**
+**Navigable Maze (Maze Runner)**
 If the player selects the 'Maze Runner' option, the player will be instructed on how to play the game and then be prompted to press 'b' to begin the game. The game itself basically allows the player to move through a maze using arrow keys. The goal is to exit the large maze, by reaching any of the four borders.
 
-The maze layout is generated randomly (we implemented a randomizer maze algorithm using a modified Prim's algorithm common in maze generation) so that each time the player clicks on the Navigatable Maze option, they get to explore a different maze generated instantly. Here is an example maze layout (very simple, larger in the real game): 
+The maze layout is generated randomly (we implemented a randomizer maze algorithm using a modified Prim's algorithm common in maze generation) so that each time the player clicks on the Navigable Maze option, they get to explore a different maze generated instantly. Here is an example maze layout (very simple, larger in the real game): 
 
 
 |+++++++##++++++##+|
@@ -72,7 +72,7 @@ For Hidden Maze:
 - When the player is trying the next move, there will be options for the player prompted out in the command line, which asks the player which direction to go. The player only needs to type the directions in the command line, and the player will go to the next position.
 - When the player gets closer to a boss, the command line will prompt out "there is a boss around, which direction do you want to shoot arrows?" Then the player can type in which directions to shoot the boss.
 
-For Navigatable Maze:
+For Navigable Maze:
 - As the player must use arrow keys to move through the maze, our program makes use of keyboard events. 
 The player can press 'q' at any point to quit the game. 
 
@@ -146,19 +146,19 @@ location class:
 8. void escape()
     if there is a boss, the boss escape to other position if the player missed a shot
   
-navigatable maze class:
+navigable maze class:
 1. WINDOW *create_window(int height, int width, int starty, int startx);
   to create windows for game
 2. void delete_window(WINDOW *local_win);
   deletes the window
 3. void run_game();
-  runs the navigatable maze game
+  runs the navigable maze game
 4. bool you_won = false;
   determines whether the player won or not at the end
 5. void run_navigatable_maze();
   displays the navigatable maze
 void print_instructions();
-  prints out instructions for the player on how to play the navigatable maze game
+  prints out instructions for the player on how to play the navigable maze game
 
 game options class:
 1. int startx, starty = 0;
@@ -176,6 +176,6 @@ Our team will first work on the fundamental implementation of a maze structure i
 
 Yu He will implement the Hidden Maze game using maps and vectors.
 Harini Arumugam will utilize the ncurses library to develop the visual structure of the game as well as implement the basic structure of the nagivatable maze game.
-Kirk Shen Leck will implement a maze randomizer algorithm to randomize the maze layout for the navigatable maze game. 
+Kirk Shen Leck will implement a maze randomizer algorithm to randomize the maze layout for the navigable maze game. 
 
 Yu and Harini will write catch2 test cases for our game.
